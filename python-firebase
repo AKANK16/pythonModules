@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Feb  8 08:46:26 2019
+@author: Aakankshaa
+"""
+
+'''Prerequisites:
+    installing requests and firebase in the right directories.
+    Follow these links and use my code:
+        http://ozgur.github.io/python-firebase/
+        https://www.youtube.com/playlist?list=PLK5xF68Dk30br0B-Q1GH2S4QEXxIUs7RL
+        
+       find links and authkey for our firebase data here:   https://docs.google.com/document/d/1q0tH1LPq3ylLiYoAo92R0Hz9r_cBvEfh0hRCm_8hcHE/edit
+'''
+
+
+from firebase import firebase
+firebase=firebase.FirebaseApplication('https://mindmeld-91b1d.firebaseio.com/') #link to the firebase console
+
+'''
+#reading the firebase
+result=firebase.get('Indicator',None) #indicator is the database key who's value you want to fetch,secoond arguement is child name
+#get returns a json object
+print(result)
+'''
+
+
+
+#writing to the firebase
+#result=firebase.post('Indicator',)
+result=firebase.put('Indicator','value','1')    #pass 0,1,2 in argument 3 according to classifier's result
